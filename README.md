@@ -2,7 +2,7 @@
 
 # Introduction
 
-This is the sample application codebase for RU102JS, Redis for JavaScript developers.
+This is the sample application codebase for RU102JS, Redis for JavaScript developers at [Redis University](https://university.redislabs.com).
 
 # Prerequisites
 
