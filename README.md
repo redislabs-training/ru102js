@@ -4,6 +4,8 @@
 
 This is the sample application codebase for RU102JS, Redis for JavaScript developers at [Redis University](https://university.redislabs.com).
 
+Solutions to the course programming challenges can be found on the `solutions` branch.
+
 # Prerequisites
 
 In order to start and run this application, you will need:
