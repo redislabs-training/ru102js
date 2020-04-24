@@ -1,0 +1,16 @@
+{
+    "env": {
+        "node": true,
+        "es6": true
+    },
+    "extends": "airbnb",
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 6
+    },
+    "rules": {
+        "no-console": "off",
+        "no-restricted-syntax": "off",
+        "no-prototype-builtins": "off"
+    }
+}

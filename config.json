@@ -1,0 +1,14 @@
+{
+  "application": {
+    "port": 8081,
+    "logLevel": "debug",
+    "dataStore": "redis"
+  },
+  "dataStores": {
+    "redis": {
+      "host": "localhost",
+      "port": 6379,
+      "keyPrefix": "ru102js"
+    }
+  }
+}

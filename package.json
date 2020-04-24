@@ -1,0 +1,47 @@
+{
+  "name": "redisolar",
+  "version": "1.0.0",
+  "description": "Example application for Redis University RU102JS course.",
+  "main": "./src/app.js",
+  "directories": {
+    "test": "test"
+  },
+  "private": true,
+  "scripts": {
+    "dev": "./node_modules/nodemon/bin/nodemon.js",
+    "load": "node src/utils/data_loader.js --",
+    "lint": "./node_modules/eslint/bin/eslint.js src tests",
+    "start": "node ./src/app.js",
+    "test": "jest --no-colors",
+    "testdev": "jest --watch"
+  },
+  "author": "Redis Labs",
+  "engines": {
+    "node": ">=8.9.4"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "better-config": "^1.2.3",
+    "bluebird": "^3.5.5",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.0.0",
+    "moment": "^2.24.0",
+    "morgan": "^1.9.1",
+    "redis": "^2.8.0",
+    "round-to": "^4.0.0",
+    "shortid": "^2.2.14",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.4"
+  }
+}
