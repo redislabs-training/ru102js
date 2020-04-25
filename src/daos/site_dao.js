@@ -1,7 +1,7 @@
 const daoLoader = require('./daoloader');
 
-// Week 3, change this from 'site' to 'site_geo'.
-const impl = daoLoader.loadDao('site');
+// Change 'site_geo' to 'site' to revert to using 'site_dao_redis_impl.js'.
+const impl = daoLoader.loadDao('site_geo');
 
 module.exports = {
   /**

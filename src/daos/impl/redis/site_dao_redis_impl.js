@@ -88,7 +88,6 @@ const findById = async (id) => {
   return (siteHash === null ? siteHash : remap(siteHash));
 };
 
-/* eslint-disable arrow-body-style */
 /**
  * Get an array of all site objects.
  *
@@ -96,10 +95,28 @@ const findById = async (id) => {
  */
 const findAll = async () => {
   // START CHALLENGE #1
-  return [];
+  const client = redis.getClient();
+
+  const siteIds = await client.smembersAsync(keyGenerator.getSiteIDsKey());
+  const sites = [];
+
+  for (const siteId of siteIds) {
+    /* eslint-disable no-await-in-loop */
+    const siteHash = await client.hgetallAsync(siteId);
+    /* eslint-enable */
+
+    if (siteHash) {
+      // Call remap to remap the flat key/value representation
+      // from the Redis hash into the site domain object format,
+      // and convert any fields that a numerical from the Redis
+      // string representations.
+      sites.push(remap(siteHash));
+    }
+  }
+
+  return sites;
   // END CHALLENGE #1
 };
-/* eslint-enable */
 
 /* eslint-disable no-unused-vars */
 

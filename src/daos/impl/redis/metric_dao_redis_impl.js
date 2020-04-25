@@ -41,7 +41,6 @@ const extractMeasurementMinute = (measurementMinute) => {
   };
 };
 
-/* eslint-disable no-unused-vars */
 /**
  * Insert a metric into the database for a given solar site ID.
  * This function uses a sorted set to store the metric.
@@ -59,9 +58,12 @@ const insertMetric = async (siteId, metricValue, metricName, timestamp) => {
   const minuteOfDay = timeUtils.getMinuteOfDay(timestamp);
 
   // START Challenge #2
+
+  await client.zaddAsync(metricKey, minuteOfDay, formatMeasurementMinute(metricValue, minuteOfDay));
+  await client.expireAsync(metricKey, metricExpirationSeconds);
+
   // END Challenge #2
 };
-/* eslint-enable */
 
 /**
  * Get a set of metrics for a specific solar site on a given day.
