@@ -6,6 +6,7 @@ bluebird.promisifyAll(redis);
 const client = redis.createClient({
   host: 'localhost',
   port: 6379,
+  // password: 'password',
 });
 
 const testSuiteName = 'data_types';
