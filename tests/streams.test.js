@@ -1,3 +1,7 @@
+const config = require('better-config');
+
+config.set('../config.json');
+
 const redis = require('../src/daos/impl/redis/redis_client');
 
 const client = redis.getClient();
