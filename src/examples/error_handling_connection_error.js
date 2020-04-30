@@ -9,6 +9,7 @@ const connectionErrorExample = async () => {
     const client = redis.createClient({
       port: 6379,
       host: '127.0.0.1',
+      // password: 'password',
       retry_strategy: (options) => {
         if (options.attempt > 5) {
           return new Error('Retry attempts exhausted.');

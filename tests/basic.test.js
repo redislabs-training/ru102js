@@ -1,12 +1,10 @@
-const redis = require('redis');
-const bluebird = require('bluebird');
+const config = require('better-config');
 
-bluebird.promisifyAll(redis);
+config.set('../config.json');
 
-const client = redis.createClient({
-  host: 'localhost',
-  port: 6379,
-});
+const redis = require('../src/daos/impl/redis/redis_client');
+
+const client = redis.getClient();
 
 const testSuiteName = 'Basic';
 

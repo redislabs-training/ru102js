@@ -11,10 +11,16 @@ bluebird.promisifyAll(redis);
 
 // Create a client and connect to Redis using configuration
 // from config.json.
-const client = redis.createClient({
+const clientConfig = {
   host: config.get('dataStores.redis.host'),
   port: config.get('dataStores.redis.port'),
-});
+};
+
+if (config.get('dataStores.redis.password')) {
+  clientConfig.password = config.get('dataStores.redis.password');
+}
+
+const client = redis.createClient(clientConfig);
 
 // This is a catch all basic error handler.
 client.on('error', error => console.log(error));

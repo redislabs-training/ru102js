@@ -1,4 +1,7 @@
 const config = require('better-config');
+
+config.set('../config.json');
+
 const redis = require('../src/daos/impl/redis/redis_client');
 const redisSiteDAO = require('../src/daos/impl/redis/site_dao_redis_impl');
 const keyGenerator = require('../src/daos/impl/redis/redis_key_generator');
@@ -7,7 +10,6 @@ const testSuiteName = 'site_dao_redis_impl';
 
 const testKeyPrefix = `test:${testSuiteName}`;
 
-config.set('../config.json');
 keyGenerator.setPrefix(testKeyPrefix);
 const client = redis.getClient();
 

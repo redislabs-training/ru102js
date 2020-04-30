@@ -1,8 +1,9 @@
 const config = require('better-config');
-const path = require('path');
-const redis = require('../daos/impl/redis/redis_client');
 
 config.set('../../config.json');
+
+const path = require('path');
+const redis = require('../daos/impl/redis/redis_client');
 
 const client = redis.getClient();
 const sitesDao = require('../daos/impl/redis/site_dao_redis_impl');

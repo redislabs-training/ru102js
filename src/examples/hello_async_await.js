@@ -13,6 +13,7 @@ const runApplication = async () => {
   const client = redis.createClient({
     host: 'localhost',
     port: 6379,
+    // password: 'password',
   });
 
   // Run a Redis command.
