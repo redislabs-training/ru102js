@@ -14,6 +14,7 @@ const startConsumer = async () => {
   const consumerClient = redis.createClient({
     port: 6379,
     host: '127.0.0.1',
+    // password: 'password',
   });
 
   while (!done) {
@@ -48,6 +49,7 @@ const startProducer = async () => {
   const producerClient = redis.createClient({
     port: 6379,
     host: '127.0.0.1',
+    // password: 'password',
   });
 
   // Run the producer at one second intervals.

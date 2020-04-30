@@ -5,6 +5,7 @@ const { promisify } = require('util');
 const client = redis.createClient({
   host: 'localhost',
   port: 6379,
+  // password: 'password',
 });
 
 // Use Node's built in promisify to wrap the Redis
