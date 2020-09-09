@@ -12,7 +12,7 @@ const controller = require('../controllers/capacity_controller');
  *  passed in, otherwise 10 as a default.
  * @private
  */
-const getLimit = n => (Number.isNaN(n) ? 10 : n);
+const getLimit = n => (Number.isNaN(n) || undefined === n ? 10 : n);
 
 // GET /capacity?limit=99
 router.get(
