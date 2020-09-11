@@ -13,7 +13,8 @@ router.get(
   ],
   async (req, res, next) => {
     try {
-      const limit = (req.query.n == null || Number.isNaN(req.query.n)) ? 120 : req.query.n;
+      const limit = (req.query.n == null || Number.isNaN(req.query.n)
+                     || undefined === req.query.n) ? 120 : req.query.n;
 
       const siteMetricsReport = await controller.getMetricsForSite(req.params.siteId, limit);
       return res.status(200).json(siteMetricsReport);
