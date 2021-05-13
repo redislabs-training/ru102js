@@ -131,3 +131,7 @@ To run the linter:
 ```
 npm run lint
 ```
+
+### Subscribe to our YouTube Channel
+
+We'd love for you to [check out our YouTube channel](https://youtube.com/redislabs), and subscribe if you want to see more Redis videos!
