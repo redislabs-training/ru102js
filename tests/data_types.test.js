@@ -78,7 +78,7 @@ test(`${testSuiteName}: Test Redis hash`, async () => {
 test(`${testSuiteName}: Test Redis float`, async () => {
   await client.setAsync(testKeyName, 22.5);
 
-  value = await client.incrbyfloatAsync(testKeyName, 1);
+  const value = await client.incrbyfloatAsync(testKeyName, 1);
   expect(typeof (value)).toBe('string');
   expect(value).toBe('23.5');
   expect(parseFloat(value)).toBeCloseTo(23.5);
