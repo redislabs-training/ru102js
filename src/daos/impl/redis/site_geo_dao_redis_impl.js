@@ -190,7 +190,7 @@ const findByGeoWithExcessCapacity = async (lat, lng, radius, radiusUnit) => {
   // Get sites within the radius and store them in a temporary sorted set.
   const sitesInRadiusSortedSetKey = keyGenerator.getTemporaryKey();
 
-  setOperationsPipeline.georadiusAsync(
+  setOperationsPipeline.georadius(
     keyGenerator.getSiteGeoKey(),
     lng,
     lat,
