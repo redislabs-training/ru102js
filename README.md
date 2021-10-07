@@ -30,7 +30,7 @@ $ npm install
 
 # Configuration 
 
-The application uses a configuration file, `config.json` to specify the port that it listens 
+The application uses a configuration file, `config.json`, to specify the port that it listens 
 on plus some logging parameters and how it connects to a database.  
 
 The supplied `config.json` file is already set up to use Redis on localhost port 6379.  Change these values if your Redis instance is on another host or port, or requires a password to connect.
