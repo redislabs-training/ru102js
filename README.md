@@ -1,8 +1,6 @@
 # RediSolar for Node.js
 
-<p align="center">
-   <img src="https://i.ibb.co/QNKrq04/redisolar.png" alt="RediSolar"/>
-</p>
+![Preview of running application - Solar Site Map with markers](preview.png)
 
 # Introduction
 
