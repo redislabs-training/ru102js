@@ -15,7 +15,7 @@
     "test": "jest --no-colors",
     "testdev": "jest --watch"
   },
-  "author": "Redis Labs",
+  "author": "Redis",
   "engines": {
     "node": ">=8.9.4"
   },
