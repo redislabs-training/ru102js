@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  redis:
+    container_name: redistimeseries_ru102js
+    image: redislabs/redistimeseries:latest
+    expose:
+      - "6379"
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./redisdata:/data
+    security_opt:
+      - "no-new-privileges:true"
