@@ -1,0 +1,15 @@
+tasks:
+  - name: Install RedisTimeSeries module
+    init: docker-compose up -d
+    command: gp sync-done finished
+    openMode: split-left
+  - name: Start front-end
+    init: >
+      npm install &&
+      npm run load src/resources/data/sites.json
+    command: gp sync-await finished && npm run dev
+    openMode: split-right
+
+ports:
+  - port: 8081
+    onOpen: open-preview
