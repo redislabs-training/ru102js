@@ -29,6 +29,21 @@ To get started:
 ```
 $ npm install
 ```
+You'll also need to have the RedisTimeSeries module installed, which you can get by going through the following steps:
+- Install [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/)
+- Check your Docker Compose version using ```docker-compose --version```.  In order for our compose file to work, you need to have at least v1.27.0.  
+- Start up the Docker daemon.  
+- Run ```docker-compose up -d``` in the project directory.  This command will give you Redis on localhost port 6379 with no password required, with the required RedisTimeSeries module installed.  The container will persist Redis data to the ```redisdata``` folder.
+
+You should see the following once the command has successfully run:
+
+<img src=docker-compose.png width="450" height="200">
+
+You'll also see the ```ru102js``` container running if you open up the Docker app.  
+
+If you get an error that says something like ```Version in "./docker-compose.yml" is unsupported```, you probably need to update your docker compose version to 1.27.0 or higher.
+
+If you want to shut down the Redis container, you can run ```docker-compose down```.
 
 # Configuration
 
@@ -134,6 +149,6 @@ To run the linter:
 npm run lint
 ```
 
-# Subscribe to our YouTube Channel
+# Subscribe to our YouTube Channel / Follow us on Twitch
 
-We'd love for you to [check out our YouTube channel](https://youtube.com/redisinc), and subscribe if you want to see more Redis videos!
+We'd love for you to [check out our YouTube channel](https://youtube.com/redisinc), and subscribe if you want to see more Redis videos!  We also stream regularly on our [Twitch.tv channel](https://www.twitch.tv/redisinc) - follow us to be notified when we're live.
