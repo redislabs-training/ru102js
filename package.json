@@ -8,12 +8,12 @@
   },
   "private": true,
   "scripts": {
-    "dev": "./node_modules/nodemon/bin/nodemon.js",
-    "load": "node src/utils/data_loader.js --",
+    "dev": "NODE_TLS_REJECT_UNAUTHORIZED=0 ./node_modules/nodemon/bin/nodemon.js",
+    "load": "NODE_TLS_REJECT_UNAUTHORIZED=0 node src/utils/data_loader.js --",
     "lint": "./node_modules/eslint/bin/eslint.js src tests",
-    "start": "node ./src/app.js",
-    "test": "jest --no-colors",
-    "testdev": "jest --watch"
+    "start": "NODE_TLS_REJECT_UNAUTHORIZED=0 node ./src/app.js",
+    "test": "NODE_TLS_REJECT_UNAUTHORIZED=0 jest --no-colors",
+    "testdev": "NODE_TLS_REJECT_UNAUTHORIZED=0 jest --watch"
   },
   "author": "Redis",
   "engines": {
@@ -29,7 +29,7 @@
     "express-validator": "^6.0.0",
     "moment": "^2.24.0",
     "morgan": "^1.9.1",
-    "redis": "^2.8.0",
+    "redis": "2.8.0",
     "round-to": "^4.0.0",
     "shortid": "^2.2.14",
     "winston": "^3.2.1"
