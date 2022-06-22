@@ -30,7 +30,7 @@ To get started:
 $ npm install
 ```
 You'll also need to have the RedisTimeSeries module installed, which you can get by going through the following steps:
-- Install [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/)
+- Install [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/).
 - Check your Docker Compose version using ```docker-compose --version```.  In order for our compose file to work, you need to have at least v1.27.0.  
 - Start up the Docker daemon.  
 - Run ```docker-compose up -d``` in the project directory.  This command will give you Redis on localhost port 6379 with no password required, with the required RedisTimeSeries module installed.  The container will persist Redis data to the ```redisdata``` folder.
