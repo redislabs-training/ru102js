@@ -19,7 +19,7 @@ In order to start and run this application, you will need:
 
 If you're using Windows, check out the following resources for help with running Redis:
 
-- [Redis Labs Blog - Running Redis on Windows 10](https://redis.com/blog/redis-on-windows-10/)
+- [Redis Blog - Running Redis on Windows 10](https://redis.com/blog/redis-on-windows-10/)
 - [Microsoft - Windows Subsystem for Linux Installation Guide for Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 
 # Setup
@@ -148,6 +148,10 @@ To run the linter:
 ```
 npm run lint
 ```
+
+# Need Help / Join our Community
+
+If you need help with the course or want to chat to your fellow students and the wider Redis community, please [join us on our Discord server](https://discord.gg/V2jj3qW).
 
 # Subscribe to our YouTube Channel / Follow us on Twitch
 
