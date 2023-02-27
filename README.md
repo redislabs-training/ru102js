@@ -12,7 +12,7 @@ Solutions to the course programming challenges can be found on the `solutions` b
 
 In order to start and run this application, you will need:
 
-- [Node.js](https://nodejs.org/en/download/) (8.9.4 or newer, we recommend using the current Long Term Stable version)
+- [Node.js](https://nodejs.org/en/download/) (10.24.1 or newer, we recommend using the current Long Term Stable version)
 - npm (installed with Node.js)
 - Access to a local or remote installation of [Redis](https://redis.io/download) version 5 or newer (local preferred)
 - If you want to try the RedisTimeSeries exercises, you'll need to make sure that your Redis installation also has the [RedisTimeSeries Module](https://oss.redis.com/redistimeseries/) installed

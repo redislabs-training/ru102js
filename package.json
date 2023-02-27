@@ -8,7 +8,7 @@
   },
   "private": true,
   "scripts": {
-    "dev": "./node_modules/nodemon/bin/nodemon.js",
+    "dev": "nodemon",
     "load": "node src/utils/data_loader.js --",
     "lint": "./node_modules/eslint/bin/eslint.js src tests",
     "start": "node ./src/app.js",
@@ -17,7 +17,7 @@
   },
   "author": "Redis",
   "engines": {
-    "node": ">=8.9.4"
+    "node": ">=10.24.1"
   },
   "license": "MIT",
   "dependencies": {
