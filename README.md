@@ -45,12 +45,17 @@ You'll also need to have a Redis Stack instance running.  Either [install it loc
 You should see the following once the command has successfully run:
 
 ```
-TODO EXAMPLE OUTPUT
+Creating network "ru102js_default" with the default driver
+Creating redis_ru102js ... done
 ```
 
 You'll also see the ```redis_ru102js``` container running if you open up the Docker app.  
 
-If you want to shut down the Redis Stack container, you can run ```docker-compose down```.
+If you want to shut down the Redis Stack container, use:
+
+```
+docker-compose down
+```
 
 # Configuration
 
@@ -143,7 +148,9 @@ npm testdev
 
 # Optional (but Recommended): RedisInsight
 
-TODO
+RedisInsight is a graphical tool for viewing data in Redis and managing Redis server instances.  You don't need to install it to be successful with this course, but we recommend it as a good way of viewing data stored in Redis.
+
+To use RedisInsight, you'll need to [download it](https://redis.io/docs/ui/insight/) then point it at your Redis instance.
 
 # Linting
 
