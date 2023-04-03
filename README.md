@@ -13,9 +13,8 @@ Solutions to the course programming challenges can be found on the `solutions` b
 In order to start and run this application, you will need:
 
 - [Node.js](https://nodejs.org/en/download/) (8.9.4 or newer, we recommend using the current Long Term Stable version)
-- npm (installed with Node.js)
-- Access to a local or remote installation of [Redis](https://redis.io/download) version 5 or newer (local preferred)
-- If you want to try the RedisTimeSeries exercises, you'll need to make sure that your Redis installation also has the [RedisTimeSeries Module](https://oss.redis.com/redistimeseries/) installed
+- npm (installed with Node.js).
+- Access to a local or remote installation of [Redis Stack](https://redis.io/docs/stack/get-started/install/) - local preferred, we provide a Docker Compose file in this repo, read on for details.
 
 If you're using Windows, check out the following resources for help with running Redis:
 
@@ -24,26 +23,34 @@ If you're using Windows, check out the following resources for help with running
 
 # Setup
 
-To get started:
+To get started, clone this repository:
+
+```
+$ git clone https://github.com/redislabs-training/ru102js.git
+$ cd ru102js
+```
+
+Now install the dependencies:
 
 ```
 $ npm install
 ```
-You'll also need to have the RedisTimeSeries module installed, which you can get by going through the following steps:
+
+You'll also need to have a Redis Stack instance running.  Either [install it locally](https://redis.io/docs/stack/get-started/install/), or use the Docker Compose file provided:
+
 - Install [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/).
-- Check your Docker Compose version using ```docker-compose --version```.  In order for our compose file to work, you need to have at least v1.27.0.  
 - Start up the Docker daemon.  
-- Run ```docker-compose up -d``` in the project directory.  This command will give you Redis on localhost port 6379 with no password required, with the required RedisTimeSeries module installed.  The container will persist Redis data to the ```redisdata``` folder.
+- Run ```docker-compose up -d``` in the project directory.  This command will give you Redis Stack on localhost port 6379 with no password required.  The container will persist Redis data to the ```redisdata``` folder.
 
 You should see the following once the command has successfully run:
 
-<img src=docker-compose.png width="450" height="200">
+```
+TODO EXAMPLE OUTPUT
+```
 
-You'll also see the ```ru102js``` container running if you open up the Docker app.  
+You'll also see the ```redis_ru102js``` container running if you open up the Docker app.  
 
-If you get an error that says something like ```Version in "./docker-compose.yml" is unsupported```, you probably need to update your docker compose version to 1.27.0 or higher.
-
-If you want to shut down the Redis container, you can run ```docker-compose down```.
+If you want to shut down the Redis Stack container, you can run ```docker-compose down```.
 
 # Configuration
 
@@ -133,6 +140,10 @@ subsets of tests and many more options:
 ```
 npm testdev
 ```
+
+# Optional (but Recommended): RedisInsight
+
+TODO
 
 # Linting
 

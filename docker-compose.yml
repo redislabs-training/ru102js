@@ -1,13 +1,14 @@
 version: "3.9"
 services:
   redis:
-    container_name: redistimeseries_ru102js
-    image: redislabs/redistimeseries:latest
-    expose:
-      - "6379"
+    container_name: redis_ru102js
+    image: redis/redis-stack:latest
     ports:
       - "6379:6379"
+      - "8001:8001"
     volumes:
       - ./redisdata:/data
-    security_opt:
-      - "no-new-privileges:true"
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
