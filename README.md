@@ -12,7 +12,7 @@ Solutions to the course programming challenges can be found on the `solutions` b
 
 In order to start and run this application, you will need:
 
-- [Node.js](https://nodejs.org/en/download/) (8.9.4 or newer, we recommend using the current Long Term Stable version)
+- [Node.js](https://nodejs.org/en/download/) (We recommend using the current Long Term Stable version and have tested with version 18.4.2).
 - npm (installed with Node.js).
 - Access to a local or remote installation of [Redis Stack](https://redis.io/docs/stack/get-started/install/) - local preferred, we provide a Docker Compose file in this repo, read on for details.
 
