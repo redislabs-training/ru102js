@@ -9,7 +9,7 @@ services:
     volumes:
       - ./redisdata:/data
     environment:
-      - REDIS_ARGS=--appendonly yes
+      - REDIS_ARGS=--appendonly yes --save ""
     deploy:
       replicas: 1
       restart_policy:
