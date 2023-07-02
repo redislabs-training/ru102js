@@ -143,7 +143,7 @@ To run Jest continuously in watch mode, which gives you access to menus allowing
 subsets of tests and many more options:
 
 ```
-npm testdev
+npm run testdev
 ```
 
 # Optional (but Recommended): RedisInsight
