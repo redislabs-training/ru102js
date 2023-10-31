@@ -272,7 +272,7 @@ test(`${testSuiteName}: findByGeo no results`, async () => {
 });
 
 // This test is for Challenge #5.
-test.skip(`${testSuiteName}: findByGeoWithExcessCapacity`, async () => {
+test(`${testSuiteName}: findByGeoWithExcessCapacity`, async () => {
   const site1 = {
     id: 1,
     capacity: 4.5,
