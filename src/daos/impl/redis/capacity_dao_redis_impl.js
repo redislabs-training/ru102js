@@ -67,7 +67,7 @@ const getRank = async (siteId) => {
   // START Challenge #4
   const client = redis.getClient();
 
-  const result = await client.zrankAsync(
+  const result = await client.zrevrankAsync(
     keyGenerator.getCapacityRankingKey(),
     `${siteId}`,
   );
