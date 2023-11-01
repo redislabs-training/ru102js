@@ -86,19 +86,19 @@ const insertAndReadBackFromStream = async (siteId) => {
 };
 
 // This test is for Challenge #6.
-test.skip(`${testSuiteName}: insert and read back from global stream`, async () => {
+test(`${testSuiteName}: insert and read back from global stream`, async () => {
   await insertAndReadBackFromStream();
 });
 
 // This test is for Challenge #6.
-test.skip(`${testSuiteName}: read stream for site that does not exist`, async () => {
+test(`${testSuiteName}: read stream for site that does not exist`, async () => {
   const meterReadings = await redisFeedDAO.getRecentForSite(-1, 100);
 
   expect(meterReadings.length).toBe(0);
 });
 
 // This test is for Challenge #6.
-test.skip(`${testSuiteName}: insert and read back from site specific stream`, async () => {
+test(`${testSuiteName}: insert and read back from site specific stream`, async () => {
   await insertAndReadBackFromStream(998);
 });
 
