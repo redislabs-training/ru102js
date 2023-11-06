@@ -1,7 +1,7 @@
 const daoLoader = require('./daoloader');
 
 // Week 4, change this from 'metric' to 'metric_ts'.
-const impl = daoLoader.loadDao('metric');
+const impl = daoLoader.loadDao('metric_ts');
 
 module.exports = {
   /**
