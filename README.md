@@ -4,7 +4,7 @@
 
 # Introduction
 
-This is the sample application codebase for RU102JS, [Redis for JavaScript Developers](https://university.redis.com/courses/ru102js/) at [Redis University](https://university.redis.com).
+This is the sample application codebase for RU102JS, [Redis for JavaScript Developers](https://university.redis.io/learningpath/jjzus2xg4rjdrt) on [Redis University](https://university.redis.com).
 
 Solutions to the course programming challenges can be found on the `solutions` branch.
 
@@ -146,7 +146,7 @@ subsets of tests and many more options:
 npm testdev
 ```
 
-# Optional (but Recommended): RedisInsight
+# Optional (But recommended): RedisInsight
 
 RedisInsight is a graphical tool for viewing data in Redis and managing Redis server instances.  You don't need to install it to be successful with this course, but we recommend it as a good way of viewing data stored in Redis.
 
